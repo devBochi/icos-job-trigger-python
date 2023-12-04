@@ -11,17 +11,17 @@ cos = ibm_boto3.resource("s3",
     endpoint_url=os.environ.get("ENDPOINT")
 )
 
-print("Hello world")
-
 # We parse the metadata that comes from the ICOS put event
 eventInfo = json.dumps(os.environ.get("CE_DATA"))
 
+print(eventInfo)
+
 params = {
-    "Bucket" : eventInfo.bucket, 
-    "Key": eventInfo.key
+    'bucket' : eventInfo.bucket, 
+    'key': eventInfo.key
 };
 
-# print(params)   
+print(params)   
 
 # With the info of the event, we can get the object and do whatever we want
 def get_item(bucket_name, item_name):
@@ -34,4 +34,4 @@ def get_item(bucket_name, item_name):
     except Exception as e:
         print("Unable to retrieve file contents: {0}".format(e))
 
-get_item(params["Bucket"], params["Key"])
+# get_item(params["bucket"], params["key"])
