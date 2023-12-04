@@ -20,8 +20,8 @@ print(eventInfo)
 print("----------")
 
 params = {
-    'bucket' : eventInfo.bucket, 
-    'key': eventInfo.key
+    'bucket' : eventInfo["bucket"], 
+    'key': eventInfo["key"]
 }
 
 print(params)   
@@ -37,4 +37,4 @@ def get_item(bucket_name, item_name):
     except Exception as e:
         print("Unable to retrieve file contents: {0}".format(e))
 
-# get_item(params["bucket"], params["key"])
+get_item(params["bucket"], params["key"])
