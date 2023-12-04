@@ -14,7 +14,7 @@ cos = ibm_boto3.resource("s3",
 print("Hello world")
 
 # We parse the metadata that comes from the ICOS put event
-eventInfo = json.dumps(os.environ("CE_DATA"))
+eventInfo = json.dumps(os.environ.get("CE_DATA"))
 
 params = {
     "Bucket" : eventInfo.bucket, 
