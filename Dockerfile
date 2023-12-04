@@ -8,6 +8,6 @@ WORKDIR /usr/scr/app
 COPY . .
 
 # Comando para correr el programa
-RUN pip install ibm_boto3
+RUN python -m pip install -r requirements.txt
 
 CMD [ "python", "icos-demo-job.py" ] 
