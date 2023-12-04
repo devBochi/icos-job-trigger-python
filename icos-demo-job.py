@@ -5,11 +5,13 @@ from ibm_botocore.client import Config, ClientError
 
 # Create resource with credentials for ICOS sdk
 cos = ibm_boto3.resource("s3",
-    ibm_api_key_id=os.environ("API_KEY"),
-    ibm_service_instance_id=os.environ("SERV_ID"),
+    ibm_api_key_id=os.environ.get("API_KEY"),
+    ibm_service_instance_id=os.environ.get("SERV_ID"),
     config=Config(signature_version="oauth"),
-    endpoint_url=os.environ("ENDPOINT")
+    endpoint_url=os.environ.get("ENDPOINT")
 )
+
+print("Hello world")
 
 # We parse the metadata that comes from the ICOS put event
 eventInfo = json.dumps(os.environ("CE_DATA"))
@@ -19,7 +21,7 @@ params = {
     "Key": eventInfo.key
 };
 
-print(params)   
+# print(params)   
 
 # With the info of the event, we can get the object and do whatever we want
 def get_item(bucket_name, item_name):
