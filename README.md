@@ -37,7 +37,7 @@ The files that are uploaded into IBM Cloud Object Storage are called objects. Ob
 
 ## 3. About this example
 
-This little code in Node.Js syntax is intended to give a hint of how the jobs can be used to handle an ICOS trigger to Code Engine Jobs, you can find some help on the configuration of this trigger [here](https://cloud.ibm.com/docs/codeengine?topic=codeengine-eventing-cosevent-producer#obstorage_ev_job).
+This sample code in python syntax is intended to give a hint of how the jobs can be used to handle an ICOS trigger to Code Engine Jobs, you can find some help on the configuration of this trigger [here](https://cloud.ibm.com/docs/codeengine?topic=codeengine-eventing-cosevent-producer#obstorage_ev_job).
 
 You will need this data in order to use the ICOS sdk:
 
@@ -58,4 +58,4 @@ Once we have a Code Engine project ready, we can create a Job from this reposito
 ## Sources
 
 - [IBM Cloud Code Engine](https://cloud.ibm.com/docs/codeengine?topic=codeengine-getting-started)
-- [IBM Cloud Object Storage - Node.js SDK](https://ibm.github.io/ibm-cos-sdk-js/)
+- [IBM Cloud Object Storage - Python SDK](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-python)
