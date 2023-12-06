@@ -8,6 +8,6 @@ WORKDIR /usr/scr/app
 COPY . .
 
 # Comando para correr el programa
-RUN pip install ibm-cos-sdk
+RUN pip3 install ibm-cos-sdk
 
 CMD [ "python", "icos-demo-job.py" ] 
