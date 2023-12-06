@@ -17,7 +17,7 @@ event = json.loads(os.environ.get("CE_DATA"))
 
 print("Fetching event data...")
 
-print("-----------------")
+print("------------------")
 
 # With the info of the event, we can get the object and do whatever we want
 def get_item(bucket_name, item_name):
@@ -32,6 +32,6 @@ def get_item(bucket_name, item_name):
 
 get_item(event["bucket"],event["key"])
 
-print("Thanks for using Code Engine!")
+print("Thanks for using Code Engine!\n")
 
 print("-----------------")
