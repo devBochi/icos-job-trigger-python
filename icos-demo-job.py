@@ -24,7 +24,7 @@ def get_item(bucket_name, item_name):
     print("Retrieving item from bucket: {0}, key: {1}".format(bucket_name, item_name))
     try:
         file = cos.Object(bucket_name, item_name).get()
-        print("File Contents: {0}".format(file["Body"].read()))
+        print("File Contents: {0}\n".format(file["Body"].read()))
     except ClientError as be:
         print("CLIENT ERROR: {0}\n".format(be))
     except Exception as e:
