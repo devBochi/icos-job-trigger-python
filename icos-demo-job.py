@@ -31,3 +31,7 @@ def get_item(bucket_name, item_name):
         print("Unable to retrieve file contents: {0}".format(e))
 
 get_item(event["bucket"],event["key"])
+
+print("Thanks for using Code Engine!")
+
+print("-----------------")
