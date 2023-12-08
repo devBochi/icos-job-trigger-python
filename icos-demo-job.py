@@ -3,6 +3,8 @@ import json
 import ibm_boto3
 from ibm_botocore.client import Config, ClientError
 
+print("Getting access for ICOS...")
+
 # Create resource with credentials for ICOS sdk
 cos = ibm_boto3.resource("s3",
     ibm_api_key_id=os.environ.get("API_KEY"),
