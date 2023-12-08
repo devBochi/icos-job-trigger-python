@@ -30,7 +30,7 @@ def get_item(bucket_name, item_name):
     except ClientError as be:
         print("CLIENT ERROR: {0}\n".format(be))
     except Exception as e:
-        print("Unable to retrieve file contents: {0}".format(e))
+        print("Sorry! Unable to retrieve file contents: {0}".format(e))
 
 get_item(event["bucket"],event["key"])
 
