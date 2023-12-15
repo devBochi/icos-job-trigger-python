@@ -34,6 +34,6 @@ def get_item(bucket_name, item_name):
 
 get_item(event["bucket"],event["key"])
 
-print("Thanks for using Code Engine!\n")
+print("Thanks, Code Engine!\n")
 
 print("----------------")
