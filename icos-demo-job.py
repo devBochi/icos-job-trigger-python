@@ -36,4 +36,4 @@ get_item(event["bucket"],event["key"])
 
 print("Thanks for using Code Engine!\n")
 
-print("-----------------")
+print("----------------")
